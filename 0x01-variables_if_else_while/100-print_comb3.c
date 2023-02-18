@@ -1,34 +1,28 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible different combinations of three digits
- * Return: Always 0 (Success)
+ * main - a simple program that outputs 0-9 separated by commas
+ *
+ * Return: 0 on success
  */
 int main(void)
 {
-	int n, m, l;
+	int i;
+	int j;
 
-	for (n = 48; n < 58; n++)
+	for (i = 48; i < 57; i++)
 	{
-		for (m = 49; m < 58; m++)
+		for (j = i + 1; j < 58; j++)
 		{
-			for (l = 50; l < 58; l++)
+			putchar(i);
+			putchar(j);
+			if (i != 56 || j != 57)
 			{
-				if (l > m && m > n)
-				{
-					putchar(n);
-					putchar(m);
-					putchar(l);
-					if (n != 55 || m != 56)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
 	putchar('\n');
 	return (0);
 }
-
