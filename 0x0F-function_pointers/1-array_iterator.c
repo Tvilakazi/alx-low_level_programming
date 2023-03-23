@@ -21,3 +21,4 @@
 			action(array[i]);
 		}
 	}
+
